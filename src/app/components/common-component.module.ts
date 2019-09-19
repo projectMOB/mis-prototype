@@ -9,6 +9,9 @@ import { FeaturesModule } from '../features/features.module';
 import { MatDialogModule } from "@angular/material"
 import { IdSystemModalComponent } from './modals/id-system-modal/id-system-modal.component';
 import { DeleteModalComponent } from './modals/delete-modal/delete-modal.component';
+import { CertificateModalComponent } from './modals/certificate-modal/certificate-modal.component';
+import { ClearanceModalComponent } from './modals/clearance-modal/clearance-modal.component';
+import { PermitModalComponent } from './modals/permit-modal/permit-modal.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { DeleteModalComponent } from './modals/delete-modal/delete-modal.compone
     SidebarComponent,
     ContentComponent,
     IdSystemModalComponent,
-    DeleteModalComponent
+    DeleteModalComponent,
+    CertificateModalComponent,
+    ClearanceModalComponent,
+    PermitModalComponent
   ],
   imports: [
     MatDialogModule,
@@ -33,7 +39,10 @@ import { DeleteModalComponent } from './modals/delete-modal/delete-modal.compone
   ],
   entryComponents: [ 
     IdSystemModalComponent,
-    DeleteModalComponent
+    DeleteModalComponent,
+    CertificateModalComponent,
+    ClearanceModalComponent,
+    PermitModalComponent
   ]
 })
 export class CommonComponentModule { }

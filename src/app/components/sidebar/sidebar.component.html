@@ -1,12 +1,12 @@
 <mat-nav-list>
-  <a mat-list-item>Dashboard</a>
-  <a mat-list-item routerLink="statistics">Statistics</a> 
-  <a mat-list-item [matMenuTriggerFor]="documents">Documents</a>
-  <a mat-list-item routerLink="id">ID System</a> 
+  <a mat-list-item><mat-icon>dashboard</mat-icon><span> Dashboard </span></a>
+  <a mat-list-item routerLink="statistics"><mat-icon>signal_cellular_alt</mat-icon><span> Statistics </span></a> 
+  <a mat-list-item [matMenuTriggerFor]="documents"><mat-icon>description</mat-icon><span> Documents </span></a>
+  <a mat-list-item routerLink="id"><mat-icon>perm_identity</mat-icon><span> ID System </span></a> 
   
   <mat-menu #documents="matMenu">
-    <a mat-menu-item>Certification</a>
-    <a mat-menu-item>Clearance</a>
-    <a mat-menu-item>Permit</a>
+    <a mat-menu-item routerLink="certificates">Certifications</a>
+    <a mat-menu-item routerLink="clearances">Clearances</a>
+    <a mat-menu-item routerLink="permits">Permits</a>
   </mat-menu>
 </mat-nav-list>

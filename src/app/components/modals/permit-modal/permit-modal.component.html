@@ -1,0 +1,45 @@
+<div>
+  <p>Permit Type</p>
+  <div *ngFor="let permit of permitTypes">
+    <mat-checkbox class="example-margin" [checked]="permit.isChecked">
+      {{ permit.text }}
+    </mat-checkbox>
+  </div>
+  <br />
+  <mat-form-field class="full-field" appearance="legacy">
+    <mat-label>Owner / Applicant Name</mat-label>
+    <input matInput>
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field class="full-field" appearance="legacy">
+    <mat-label>Address</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <br />
+  <p>Scope of Work</p>
+  <div *ngFor="let scope of scopeOfWorks">
+    <mat-checkbox class="example-margin" [checked]="scope.isChecked">
+      {{ scope.text }}
+    </mat-checkbox>
+  </div>
+  <br />
+  <mat-form-field class="full-field" appearance="legacy">
+    <input matInput [matDatepicker]="picker3" placeholder="Date of Application">
+    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+    <mat-datepicker #picker3></mat-datepicker>
+  </mat-form-field>
+  <br />
+  <mat-form-field class="full-field" appearance="legacy">
+    <input matInput [matDatepicker]="picker2" placeholder="Date of Issue">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+  </mat-form-field>
+
+  <br /><br />
+  <div class="btnContainer">
+    <button mat-raised-button color="primary">Save</button> &nbsp;
+    <button mat-raised-button>Cancel</button>
+  </div>
+</div>

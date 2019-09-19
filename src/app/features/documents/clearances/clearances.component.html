@@ -1,0 +1,82 @@
+<div class="row">
+  <h2>DOCUMENTS > CLEARANCES</h2>
+  <br />
+
+  <mat-form-field>
+    <mat-label>Search criteria</mat-label>
+    <mat-select>
+      <mat-option>Clearance Type</mat-option>
+      <mat-option>Trade Name</mat-option>
+      <mat-option>Registrant Name</mat-option>
+    </mat-select>
+  </mat-form-field> &nbsp;
+  <mat-form-field appearance="outline" class="search-bar">
+    <mat-label>Search</mat-label>
+    <mat-icon class="search-icon">search</mat-icon>
+    <input matInput>
+  </mat-form-field>
+  <br />
+  <br />
+
+  <div class="row mat-elevation-z3">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z3">
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Reference Number </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="clearanceType">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Clearance Type </th>
+        <td mat-cell *matCellDef="let element"> {{element.clearanceType}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="regName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Registrant Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.regName}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="tradeName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Trade Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.tradeName}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="issuedDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Issued Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.issuedDate}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="validUntil">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Valid Until </th>
+        <td mat-cell *matCellDef="let element"> {{element.validUntil}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="amountPrice">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Price Amount </th>
+        <td mat-cell *matCellDef="let element"> {{element.amountPrice}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
+        <td mat-cell *matCellDef="let element">
+          <mat-icon class="action-icon" (click)="view()">remove_red_eye</mat-icon>
+          <mat-icon class="action-icon" (click)="edit()">edit</mat-icon>
+          <mat-icon class="action-icon" (click)="delete()">delete_outline</mat-icon>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+    <button mat-raised-button color="primary" (click)="addModal()" class="addBtn">+ &nbsp; Add New</button>
+  </div>
