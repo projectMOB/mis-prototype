@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { MatFormFieldModule, MatTableModule, MatSortModule, MatPaginatorModule, MatButtonModule, MatInputModule, MatIconModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material/select';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StatisticsComponent } from './statistics/statistics.component';
@@ -16,6 +18,14 @@ const routes: Routes = [
 @NgModule({
   declarations: [DashboardComponent, StatisticsComponent, DocumentsComponent, IdSystemComponent],
   imports: [
+    MatIconModule,
+    MatInputModule,
+    MatButtonModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule,
+    MatSelectModule,
+    MatFormFieldModule,
     CommonModule,
     RouterModule.forChild(routes)
   ],

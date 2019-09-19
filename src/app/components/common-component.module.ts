@@ -6,15 +6,21 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
 import { MaterialModule } from '../shared/material/material.module';
 import { FeaturesModule } from '../features/features.module';
+import { MatDialogModule } from "@angular/material"
+import { IdSystemModalComponent } from './modals/id-system-modal/id-system-modal.component';
+import { DeleteModalComponent } from './modals/delete-modal/delete-modal.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    ContentComponent
+    ContentComponent,
+    IdSystemModalComponent,
+    DeleteModalComponent
   ],
   imports: [
+    MatDialogModule,
     CommonModule,
     MaterialModule,
     FeaturesModule
@@ -23,7 +29,11 @@ import { FeaturesModule } from '../features/features.module';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    ContentComponent
+    ContentComponent,
+  ],
+  entryComponents: [ 
+    IdSystemModalComponent,
+    DeleteModalComponent
   ]
 })
 export class CommonComponentModule { }
