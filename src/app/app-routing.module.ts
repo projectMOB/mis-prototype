@@ -4,6 +4,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { IdSystemComponent } from './features/id-system/id-system.component';
+import { StatisticsComponent } from './features/statistics/statistics.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         path: 'id',
         component: IdSystemComponent
+      },
+      {
+        path: 'statistics',
+        component: StatisticsComponent
       }
     ]
   },
