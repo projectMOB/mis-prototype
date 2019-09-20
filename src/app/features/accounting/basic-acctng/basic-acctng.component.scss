@@ -1,0 +1,203 @@
+.example-card{
+    max-width: 100%;
+}
+.card {
+    padding: 10px;
+    min-height:auto;
+    margin-top:15px;
+//    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+   -webkit-transition: .25s box-shadow;
+   transition: .25s box-shadow;
+   background:transparent;
+   border-radius: 4px;
+}
+// .card:focus, .card:hover {
+//     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+// }
+// .card-inverse .card-img-overlay {
+//     background-color: rgba(51, 51, 51, 0.85);
+//     border-color: rgba(51, 51, 51, 0.85);
+// }
+.printBtn{
+    margin-left: 10px;
+}
+.options-settings{
+    margin-bottom: 20px;
+}
+.row{
+    position: relative;
+}
+
+.first-basic{
+    display: inline-flex;
+    li{
+        list-style-type: none;
+        font-size: 15px;
+        padding: 10px 200px 10px 0px;
+        color: gray;
+    }
+
+    .valid-mark{
+        font-size: 13px;
+        color: darkred;
+    }
+}
+.second-basic{
+    display: inline-flex;
+    li{
+        list-style-type: none;
+        font-size: 15px;
+        color: gray;
+        // padding: 10px 220px 10px 0px;
+    }
+
+    .li-remarks{
+        margin-left: 465px;
+    }
+    .remarks-val{
+        margin-left: -58px;
+        font-size: 14px;
+        margin-top: 20px;
+        font-weight: 500;
+        color: black;
+    }
+    .fees-val{
+        margin-left: 0px;
+        font-size: 14px;
+        margin-top: 20px;
+        font-weight: 500;
+        position: absolute;
+        color:black;
+    }
+}
+.breadcrumbs-acctng{
+    position: absolute !important;
+    left:30px !important;
+    top: 1px;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}
+
+
+.profile-pic-container {
+    text-align: center;
+}
+
+.profile-pic {
+    font-size: 100px;
+    display: inline-block;
+    margin-right: 13%;
+}
+
+table {
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+}
+
+button {
+    float: right;
+}
+
+.removeFeeBtn{
+    margin-left: 10px;
+}
+.acctng-action-btns{
+    position: relative;
+    margin: 0 auto;
+    margin-left: 40px;
+    button{
+        float: left;
+        margin: 8px;
+    }
+}
+
+.acctng-calculate-btns{
+    button{
+        float: right;
+        margin: 4px;
+    }
+}
+.search-icon {
+    position: absolute;
+    left: 95%;
+    top: 21%;
+}
+
+.search-bar {
+    width: 500px;
+}
+
+.addBtn {
+    margin-top: 2%;
+}
+
+.action-icon {
+    margin-left: 10px;
+}
+
+.action-icon:hover {
+    cursor: pointer;
+}
+
+#acctng-cards{
+    position: relative;
+    float: right;
+    display: flex;
+    div{
+        border-radius: 3px;
+        padding: 10px;
+        margin: 10px;
+        width: 150px;
+        height: 75px;
+        span, p{
+            float: right;
+            font-size: 13px;
+            position: relative;
+            vertical-align: bottom;
+            margin-top: 55px;
+        }
+
+        .amt-val{
+            margin-top: 30px;
+        }
+
+        .card-text{
+            margin-right: -25px;
+        }
+    }
+
+    .net-amt-card{
+        background-color: lightgrey;
+    }
+
+    .total-payment-card{
+        background-color: green;
+        span, p{
+            color: #ffffff;
+        }
+    }
+
+    .sy-bal-card{
+        background-color: lightsalmon;
+        span, p{
+            color: #ffffff;
+        }
+    }
+
+    .bal-card{
+        background-color: purple;
+        span, p{
+            color: #ffffff;
+        }
+    }
+}
+
+.colored-header{
+    background-color: lightsalmon;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 8px;
+}

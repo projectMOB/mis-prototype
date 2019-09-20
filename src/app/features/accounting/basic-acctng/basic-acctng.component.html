@@ -1,0 +1,220 @@
+<div class="row">
+  <!-- Breadcrumbs --->
+  <div>
+    <mat-icon>home</mat-icon>
+    <mat-label class="breadcrumbs-acctng"> Home > Accounting </mat-label>
+  </div>
+  <br />
+
+  <!-- Account Profile --->
+
+  <!-- <div class="card" style="width: 18rem;">
+      <div class="profile-pic-container">
+          <mat-icon class="profile-pic">account_circle</mat-icon>
+        </div>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div> -->
+
+  <div class="row mat-elevation-z3">
+
+    <div class="card">
+      <div class="options-settings">
+        <mat-label>
+          <span style="top: 5px; position: relative;">
+            <mat-icon>bar_chart</mat-icon>
+          </span>
+          <span> ACCOUNTING </span>
+        </mat-label>
+
+        <button mat-raised-button color="primary" class="printBtn">
+          <mat-icon>print</mat-icon>Print
+          <mat-icon>expand_more</mat-icon>
+        </button>
+        &nbsp;
+        <button mat-raised-button color="primary" class="refreshBtn">
+          <mat-icon>refresh</mat-icon>Refresh
+        </button>
+        &nbsp;
+      </div>
+      <hr>
+
+      <br />
+
+      <div class="user-basic-info">
+        <ul class="first-basic">
+          <li>
+            Registration ID
+          </li>
+          <li>
+            Registration Date
+          </li>
+          <li>
+            OR #
+          </li>
+          <li>
+            Validation Date
+            <p class="valid-mark">
+              <mat-icon>close</mat-icon>
+              <span style="top: -7px; position: relative;">Remove</span>
+            </p>
+          </li>
+        </ul>
+        <br />
+        <ul class="second-basic">
+          <li>Fees Template</li>
+          <br />
+          <p class="fees-val">Annual</p>
+          <li class="li-remarks">Remarks</li>
+          <br />
+          <p class="remarks-val">Officially Enrolled</p>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acctng-action-btns">
+      <button mat-raised-button color="primary" class="addFeeBtn" (click)="addNewAcctng()">
+        <mat-icon>playlist_add</mat-icon>Add Fee
+      </button>
+      <button mat-raised-button color="primary" class="removeFeeBtn" (click)="deleteAcctng()">
+        <mat-icon>close</mat-icon>Remove Fee
+      </button>
+    </div>
+
+    <div class="acctng-calculate-btns">
+
+      <button mat-stroked-button color="primary" class="feesTemplate">
+        <mat-icon>attach_money</mat-icon>Recompute
+      </button>
+      <button mat-stroked-button color="primary" class="feesTemplate">
+        <mat-icon>not_interested</mat-icon>Penalty
+      </button>
+      <button mat-stroked-button color="primary" class="feesTemplate">
+        <mat-icon>checkbox</mat-icon>Fees Template
+      </button>
+      <button mat-stroked-button color="primary" class="ledgerBtn">
+        <mat-icon>account_balance_wallet</mat-icon>Ledger
+      </button>
+      <button mat-stroked-button color="primary" class="schedPaymentBtn">
+        <mat-icon>date_range</mat-icon>Schedule of Payment
+      </button>
+    </div>
+    <br /><br />
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z3">
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="account">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ACCOUNT </th>
+        <td mat-cell *matCellDef="let element"> {{element.account}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> AMOUNT </th>
+        <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="discount">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> DISCOUNT / AID </th>
+        <td mat-cell *matCellDef="let element"> {{element.discount}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="netAssess">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> NET ASSESS </th>
+        <td mat-cell *matCellDef="let element"> {{element.netAssess}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="paymentDisc">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="colored-header"> PAYMENT DISCOUNT </th>
+        <td mat-cell *matCellDef="let element"> {{element.paymentDisc}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="actualPayment">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="colored-header"> ACTUAL PAYMENT </th>
+        <td mat-cell *matCellDef="let element"> {{element.actualPayment}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="creditMemo">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="colored-header"> CREDIT MEMO </th>
+        <td mat-cell *matCellDef="let element"> {{element.creditMemo}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="debitRefund">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="colored-header"> DEBIT REFUND </th>
+        <td mat-cell *matCellDef="let element"> {{element.debitRefund}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="balance">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="colored-header"> BALANCE </th>
+        <td mat-cell *matCellDef="let element"> {{element.balance}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="remarks">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> REMARKS </th>
+        <td mat-cell *matCellDef="let element"> {{element.remarks}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="seq">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> SEQ </th>
+        <td mat-cell *matCellDef="let element"> {{element.seq}} </td>
+      </ng-container>
+
+      <!-- <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
+        <td mat-cell *matCellDef="let element">
+          <mat-icon class="action-icon" (click)="view()">remove_red_eye</mat-icon>
+          <mat-icon class="action-icon" (click)="edit()">edit</mat-icon>
+          <mat-icon class="action-icon" (click)="delete()">delete_outline</mat-icon>
+        </td>
+      </ng-container> -->
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+    <div id="acctng-cards">
+      <!--NET AMOUNT--->
+      <div class="net-amt-card">
+        <span class="amt-val">0.00</span>
+        <p class="card-text">NET AMOUNT</p>
+      </div>
+
+      <!--TOTAL PAYMENT--->
+      <div class="total-payment-card">
+        <span class="amt-val">0.00</span>
+        <p class="card-text">TOTAL PAYMENT</p>
+      </div>
+
+      <!---S.Y. BALANCE-->
+      <div class="sy-bal-card">
+        <span class="amt-val">0.00</span>
+        <p class="card-text">S.Y. BALANCE</p>
+      </div>
+
+      <!---BALANCE-->
+      <div class="bal-card">
+        <span class="amt-val">0.00</span>
+        <p class="card-text">BALANCE</p>
+      </div>
+    </div>
+
+  </div>

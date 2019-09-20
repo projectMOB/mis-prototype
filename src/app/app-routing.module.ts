@@ -8,6 +8,7 @@ import { StatisticsComponent } from './features/statistics/statistics.component'
 import { CertificationsComponent } from './features/documents/certifications/certifications.component';
 import { ClearancesComponent } from './features/documents/clearances/clearances.component';
 import { PermitsComponent } from './features/documents/permits/permits.component';
+import { BasicAcctngComponent } from './features/accounting/basic-acctng/basic-acctng.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -32,6 +33,10 @@ const routes: Routes = [
       {
         path: 'permits',
         component: PermitsComponent
+      },
+      {
+        path: 'acctng',
+        component: BasicAcctngComponent
       }
     ]
   },

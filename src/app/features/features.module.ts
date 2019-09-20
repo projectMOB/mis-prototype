@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CertificationsComponent } from './documents/certifications/certifications.component';
 import { ClearancesComponent } from './documents/clearances/clearances.component';
 import { PermitsComponent } from './documents/permits/permits.component';
+import { BasicAcctngComponent } from './accounting/basic-acctng/basic-acctng.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -22,7 +23,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [DashboardComponent, StatisticsComponent, DocumentsComponent, IdSystemComponent, CertificationsComponent, ClearancesComponent, PermitsComponent],
+  declarations: [DashboardComponent, StatisticsComponent, DocumentsComponent, IdSystemComponent, CertificationsComponent, ClearancesComponent, PermitsComponent, BasicAcctngComponent],
   imports: [
     MatIconModule,
     MatInputModule,

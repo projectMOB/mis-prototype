@@ -12,6 +12,7 @@ import { DeleteModalComponent } from './modals/delete-modal/delete-modal.compone
 import { CertificateModalComponent } from './modals/certificate-modal/certificate-modal.component';
 import { ClearanceModalComponent } from './modals/clearance-modal/clearance-modal.component';
 import { PermitModalComponent } from './modals/permit-modal/permit-modal.component';
+import { AddAcctngModalComponent } from './modals/add-acctng-modal/add-acctng-modal.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PermitModalComponent } from './modals/permit-modal/permit-modal.compone
     DeleteModalComponent,
     CertificateModalComponent,
     ClearanceModalComponent,
-    PermitModalComponent
+    PermitModalComponent,
+    AddAcctngModalComponent
   ],
   imports: [
     MatDialogModule,
@@ -42,7 +44,8 @@ import { PermitModalComponent } from './modals/permit-modal/permit-modal.compone
     DeleteModalComponent,
     CertificateModalComponent,
     ClearanceModalComponent,
-    PermitModalComponent
+    PermitModalComponent,
+    AddAcctngModalComponent
   ]
 })
 export class CommonComponentModule { }
