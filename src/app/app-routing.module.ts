@@ -9,6 +9,7 @@ import { CertificationsComponent } from './features/documents/certifications/cer
 import { ClearancesComponent } from './features/documents/clearances/clearances.component';
 import { PermitsComponent } from './features/documents/permits/permits.component';
 import { BasicAcctngComponent } from './features/accounting/basic-acctng/basic-acctng.component';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -37,6 +38,10 @@ const routes: Routes = [
       {
         path: 'acctng',
         component: BasicAcctngComponent
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
       }
     ]
   },

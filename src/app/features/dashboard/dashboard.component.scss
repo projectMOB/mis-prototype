@@ -1,0 +1,56 @@
+.grid-container {  
+    margin: 5%;
+    width: 100%;
+    text-align: center;  
+}  
+.dashboard-card {  
+    position: absolute;  
+    top: 15px;  
+    width: 100%;
+    height: 100%;
+    background-color: rgb(173, 223, 223);;
+}  
+.card-image{
+    width:35%;
+    position: absolute;
+}
+.card-content{
+    width:65%;
+    color: darkslategray;
+    display: inline-block;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    position: right;
+    padding-left: 35%
+}
+.card-content-see-more{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    color: blue;
+}
+.logo{
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+}
+.more-button {  
+    position: absolute;  
+    top: 5px;  
+    right: 10px;  
+}  
+.dashboard-card-content {  
+    width: 85%;
+    text-align: center; 
+    position: relative; 
+}
+.dashboardTitle{
+    display: inline-block;
+    padding-left: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+.cardTitle{
+    display: inline-block;
+    font-family: "Times New Roman", Times, serif;
+}
