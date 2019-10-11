@@ -1,0 +1,30 @@
+
+footer{
+    position: relative;
+    // margin: 0 auto;
+    background: #673ab7;
+    color: #fff;
+
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .row{
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        margin: 0 auto;
+
+        .copyright-footer{
+            padding: 15px;
+            text-align: center;
+            span {
+                font-size: 15px;
+                font-weight: 300;
+            }
+        }
+    }
+}

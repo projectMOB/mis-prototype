@@ -10,6 +10,11 @@ import { ClearancesComponent } from './features/documents/clearances/clearances.
 import { PermitsComponent } from './features/documents/permits/permits.component';
 import { BasicAcctngComponent } from './features/accounting/basic-acctng/basic-acctng.component';
 import { DashboardComponent } from './features/dashboard/dashboard.component';
+import { RealPropertyTaxComponent } from './features/real-property-tax/real-property-tax.component';
+import { BirthComponent } from './features/civil-registry/birth/birth.component';
+import { MarriageComponent } from './features/civil-registry/marriage/marriage.component';
+import { DeathComponent } from './features/civil-registry/death/death.component';
+import { QueueingAndSmsComponent } from './features/queueing-and-sms/queueing-and-sms.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -42,7 +47,27 @@ const routes: Routes = [
       {
         path: 'dashboard',
         component: DashboardComponent
-      }
+      },
+      {
+        path: 'real-property-tax',
+        component: RealPropertyTaxComponent
+      },
+      {
+        path: 'birth',
+        component: BirthComponent
+      },
+      {
+        path: 'marriage',
+        component: MarriageComponent
+      },
+      {
+        path: 'death',
+        component: DeathComponent
+      },
+      {
+        path: 'queueing-and-sms',
+        component: QueueingAndSmsComponent
+      },
     ]
   },
   { path: 'id', component: IdSystemComponent },

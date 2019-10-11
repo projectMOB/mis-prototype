@@ -33,6 +33,11 @@ import * as Maps from 'fusioncharts/fusioncharts.maps';
 // Load WorldMap definition
 import * as World from 'fusioncharts/maps/fusioncharts.world';
 import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+import { BirthComponent } from './civil-registry/birth/birth.component';
+import { MarriageComponent } from './civil-registry/marriage/marriage.component';
+import { DeathComponent } from './civil-registry/death/death.component';
+import { RealPropertyTaxComponent } from './real-property-tax/real-property-tax.component';
+import { QueueingAndSmsComponent } from './queueing-and-sms/queueing-and-sms.component';
 
 FusionChartsModule.fcRoot(FusionCharts, Charts, FusionTheme);
 
@@ -56,7 +61,12 @@ const routes: Routes = [
     FunnelChartComponent,
     LineChartComponent,
     PieChartComponent,
-    StackedColumnChartComponent],
+    StackedColumnChartComponent,
+    BirthComponent,
+    MarriageComponent,
+    DeathComponent,
+    RealPropertyTaxComponent,
+    QueueingAndSmsComponent],
   imports: [
     MatIconModule,
     MatInputModule,

@@ -1,78 +1,85 @@
 <div class="grid-container">
-    <mat-grid-list cols="5" rowHeight="200px">
-      <mat-grid-tile *ngFor="let card of cards" [colspan]="card.cols" [rowspan]="card.rows">
-        <mat-card class="dashboard-card" [style.background]="card.color">
-          <mat-card-header>
-            <mat-card-title>
-              <span class="cardTitle"><b>{{card.title}} </b></span>
-              <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-                <mat-icon>more_vert</mat-icon>
-              </button>
-              <mat-menu #menu="matMenu" xPosition="before">
-                <button mat-menu-item>Expand</button>
-                <button mat-menu-item>Remove</button>
-              </mat-menu>
-            </mat-card-title>
-          </mat-card-header>
-          <mat-card-content class="dashboard-card-content">
-            <div>
-              <div  class="card-image">
-                  <img class="logo" src="{{card.img}}">
-              </div>
-              <div class="card-content">
-                <p>{{card.content}}</p>
-                <div class="card-content-see-more"><p><a href="javascript: return false;" routerLink="{{card.link}}">See More..</a></p></div>
-              </div>
-              
+  <mat-grid-list cols="5" rowHeight="200px">
+    <mat-grid-tile *ngFor="let card of cards" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card" [style.background]="card.color">
+        <mat-card-header>
+          <mat-card-title>
+            <span class="cardTitle"><b>{{card.title}} </b></span>
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div style="position: relative; width: 100%; max-width: 100%;">
+            <div class="card-image">
+              <img class="logo" src="{{card.img}}">
             </div>
-            
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
-    <mat-grid-list cols="8" rowHeight="400px">
-      <mat-grid-tile [colspan]="2" [rowspan]="1">
-        <mat-card class="dashboard-card">
-          <mis-column-chart></mis-column-chart>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="2" [rowspan]="1">
-        <mat-card class="dashboard-card">
-          <mis-pie-chart></mis-pie-chart>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="2" [rowspan]="1">
-        <mat-card class="dashboard-card">
-          <mis-column-area-line-chart></mis-column-area-line-chart>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="2" [rowspan]="1">
-        <mat-card class="dashboard-card">
-          <mis-area-chart></mis-area-chart>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
-    <mat-grid-list cols="8" rowHeight="400px">
-      <mat-grid-tile [colspan]="2" [rowspan]="1">
-        <mat-card class="dashboard-card">
-          <mis-stacked-column-chart></mis-stacked-column-chart>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="2" [rowspan]="1">
-        <mat-card class="dashboard-card">
-            <mis-area-multiple-chart></mis-area-multiple-chart>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="2" [rowspan]="1">
-        <mat-card class="dashboard-card">
-          <mis-line-chart></mis-line-chart>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="2" [rowspan]="1">
-        <mat-card class="dashboard-card">
-          <mis-donut-chart></mis-donut-chart>
-        </mat-card>
-      </mat-grid-tile>
-  
-    </mat-grid-list>
-  </div>
+            <div class="card-content">
+              <p class="card-notifs">{{card.content}}</p>
+              <div class="card-content-see-more">
+                <p>
+                  <a href="javascript: return false;" class="example-tooltip-red" routerLink="{{card.link}}">
+                    see more
+                    <mat-icon>chevron_right</mat-icon>
+                  </a>
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="8" rowHeight="400px">
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-card class="dashboard-card top-cards">
+        <mis-column-chart></mis-column-chart>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-card class="dashboard-card top-cards">
+        <mis-pie-chart></mis-pie-chart>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-card class="dashboard-card top-cards">
+        <mis-column-area-line-chart></mis-column-area-line-chart>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-card class="dashboard-card top-cards">
+        <mis-area-chart></mis-area-chart>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="8" rowHeight="400px">
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-card class="dashboard-card top-cards">
+        <mis-stacked-column-chart></mis-stacked-column-chart>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-card class="dashboard-card top-cards">
+        <mis-area-multiple-chart></mis-area-multiple-chart>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-card class="dashboard-card top-cards">
+        <mis-line-chart></mis-line-chart>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-card class="dashboard-card top-cards">
+        <mis-donut-chart></mis-donut-chart>
+      </mat-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+</div>

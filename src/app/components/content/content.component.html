@@ -1,9 +1,15 @@
 <mat-sidenav-container class="example-container">
-    <mat-sidenav mode="side" opened>
-      <mis-sidebar></mis-sidebar>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <!-- <div class="logo"><img src="assets/img/logo-lg.png" alt="logo"></div> -->
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" opened>
+    <mis-sidebar></mis-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="logo"><img src="assets/img/logo-lg.png" alt="logo"></div>
+    <!-- <div class="logo"><img src="assets/img/san-jose-del-monte-bulacan-logo.png" alt="logo"></div> -->
+    <!-- <div class="toggle-menu-btn">
+      <button mat-fab color="primary" (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div> -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

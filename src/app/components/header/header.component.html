@@ -1,9 +1,13 @@
 <mat-toolbar color="primary">
   <div class="logo"><img src="assets/img/logo-sm.png" alt="logo"></div>
-  Municipality of Batangas
+  <!-- <div class="logo"><img src="assets/img/san-jose-del-monte-bulacan-logo.png" alt="logo"></div> -->
+  Municipality of Lipa
   <span class="spacer"></span>
-  <button mat-icon-button class="user-icon" [matMenuTriggerFor]="menu" aria-label="user menu">
+  <button mat-icon-button class="user-icon">
       <mat-icon>account_circle</mat-icon>
+      <span class="expand-profile" [matMenuTriggerFor]="menu" aria-label="user menu">
+        <mat-icon>expand_more</mat-icon>
+      </span>
     </button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>
