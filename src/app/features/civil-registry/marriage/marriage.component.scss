@@ -28,6 +28,8 @@ button {
     margin-top: -10px;
     margin-bottom: 35px;
     margin-right: 1%;
+    position: relative;
+    z-index: 1;
 }
 
 .action-icon {
