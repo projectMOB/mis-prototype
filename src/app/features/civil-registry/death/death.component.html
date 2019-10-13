@@ -18,6 +18,8 @@
   <br />
   <br />
 
+  <button mat-raised-button color="primary" (click)="addModal()" class="addBtn">+ &nbsp; Add New</button>
+
   <div class="row mat-elevation-z3">
     <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z3">
 
@@ -90,6 +92,4 @@
 
     </table>
     <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-
-    <button mat-raised-button color="primary" (click)="addModal()" class="addBtn">+ &nbsp; Add New</button>
   </div>

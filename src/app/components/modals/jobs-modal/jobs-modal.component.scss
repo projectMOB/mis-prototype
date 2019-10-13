@@ -1,0 +1,54 @@
+.example-card{
+    max-width: 100%;
+    
+}
+.card {
+    padding: 5px;
+    margin-top:15px;
+   -webkit-transition: .25s box-shadow;
+   transition: .25s box-shadow;
+   background:transparent;
+   border-radius: 4px;
+
+   .row {
+        display: flex;
+    }
+    height: 100%;
+}
+.printBtn{
+    margin-left: 10px;
+}
+.divStatus{
+    text-align: center;
+}
+.row{
+    position: float;
+}
+.options-settings{
+    margin-bottom: 20px;
+} 
+
+mat-tab-group{
+    background-color: whitesmoke;
+}
+.divSchedDet{
+    padding-left: 5%;
+}
+.recPatternBtn{
+    flex: 10%;
+}
+
+.recPatternDet{
+    flex: 80%;
+}
+.divRangeLeft{
+    flex: 40%;
+}
+
+.divRangeRight{
+    flex: 60%;
+}
+.divBtn{
+    text-align: right;
+}
+
