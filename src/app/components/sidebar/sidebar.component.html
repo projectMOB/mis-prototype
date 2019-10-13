@@ -4,9 +4,10 @@
   <a mat-list-item [matMenuTriggerFor]="documents"><mat-icon>description</mat-icon><span> Documents </span></a>
   <a mat-list-item routerLink="id"><mat-icon>perm_identity</mat-icon><span> ID System </span></a> 
   <a mat-list-item routerLink="acctng"><mat-icon> money</mat-icon><span> Basic Accounting </span></a> 
-  <a mat-list-item routerLink="real-property-tax"><span> Real Property Tax Administration System </span></a> 
-  <a mat-list-item routerLink="queueing-and-sms"><span> Queueing and SMS Notification </span></a> 
-  <a mat-list-item [matMenuTriggerFor]="registry"><mat-icon>file_copy</mat-icon><span> Civil Registry System </span></a> 
+  <a mat-list-item routerLink="real-property-tax"><i class="fas fa-percent"></i><span> Real Property Tax Administration System </span></a> 
+  <a mat-list-item routerLink="queueing-and-sms"><i class="fas fa-sms"></i><span> Queueing and SMS Notification </span></a> 
+  <!-- <a mat-list-item [matMenuTriggerFor]="registry"><mat-icon>file_copy</mat-icon><span> Civil Registry System </span></a>  -->
+  <a mat-list-item [matMenuTriggerFor]="registry"><i class="fas fa-file-alt"></i><span> Civil Registry System </span></a> 
   
   <mat-menu #documents="matMenu">
     <a mat-menu-item routerLink="certificates">Certifications</a>
@@ -15,9 +16,9 @@
   </mat-menu>
 
   <mat-menu #registry="matMenu">
-    <a mat-menu-item routerLink="birth">Birth</a>
-    <a mat-menu-item routerLink="marriage">Marriage</a>
-    <a mat-menu-item routerLink="death">Death</a>
-    <a mat-menu-item routerLink="others">Others</a>
+    <a mat-menu-item routerLink="birth"><i class="fas fa-baby"></i><span> Birth </span></a>
+    <a mat-menu-item routerLink="marriage"><i class="fas fa-heart"></i><span> Marriage </span></a>
+    <a mat-menu-item routerLink="death"><i class="fas fa-cross"></i><span> Death </span></a>
+    <!-- <a mat-menu-item routerLink="others">Others</a> -->
   </mat-menu>
 </mat-nav-list>
