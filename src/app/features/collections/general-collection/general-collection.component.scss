@@ -21,7 +21,9 @@ button {
 }
 
 .addBtn {
-    margin-top: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 1%;
 }
 
 .action-icon {
@@ -30,13 +32,4 @@ button {
 
 .action-icon:hover {
     cursor: pointer;
-}
-
-mat-tab-group{
-    height: 100%;;
-}
-.matGroup{
-    width: 95%;
-    padding-left: 2%;
-    padding-bottom: 1%;;
 }

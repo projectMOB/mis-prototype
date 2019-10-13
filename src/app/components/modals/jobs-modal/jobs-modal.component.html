@@ -1,0 +1,174 @@
+<div class="row">
+  <!-- Breadcrumbs --->
+  <div>
+    <mat-icon>home</mat-icon>
+    <mat-label class="breadcrumbs-acctng"> JOB RECURRENCE </mat-label>
+  </div>
+  <br />
+  <div class="row mat-elevation-z3">
+    <div class="card">
+      <div class="options-settings">
+        <mat-label>
+          <span style="top: 5px; position: relative;">
+            <mat-icon>bar_chart</mat-icon>
+          </span>
+          <span> SCHEDULE DETAILS</span>
+        </mat-label>
+      </div>
+      <hr>
+      <div class="row divSchedDet">
+        <mat-form-field>
+          <mat-label>Job Type</mat-label>
+          <mat-select>
+            <mat-option> REPORT GENERATION </mat-option>
+            <mat-option> MAIL GENERATION </mat-option>
+            <mat-option> SMS NOTIFICATION </mat-option>
+            <mat-option> RESOURCES </mat-option>
+          </mat-select>
+        </mat-form-field> &nbsp;&nbsp;
+        <br />
+        <mat-form-field>
+          <mat-label>Job Name</mat-label>
+          <mat-select>
+            <mat-option>Unpaid Tax SMS Notification</mat-option>
+            <mat-option>Unpaid Tax Email Notification</mat-option>
+            <mat-option>Paid Tax SMS Notification</mat-option>
+            <mat-option>Paid Tax SMS Notification</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="row divSchedDet">
+        <mat-form-field>
+          <mat-label>Start</mat-label>
+          <mat-select>
+            <mat-option>1 Minute</mat-option>
+            <mat-option>30 Minutes</mat-option>
+            <mat-option>1 Hour</mat-option>
+            <mat-option>1 Day</mat-option>
+          </mat-select>
+        </mat-form-field> &nbsp;&nbsp;
+        <br />
+        <mat-form-field>
+          <mat-label>End</mat-label>
+          <mat-select>
+            <mat-option>1 Minute</mat-option>
+            <mat-option>30 Minutes</mat-option>
+            <mat-option>1 Hour</mat-option>
+            <mat-option>1 Day</mat-option>
+          </mat-select>
+        </mat-form-field> &nbsp;&nbsp;
+        <br />
+        <mat-form-field>
+          <mat-label>Duration</mat-label>
+          <mat-select>
+            <mat-option>1 Minute</mat-option>
+            <mat-option>30 Minutes</mat-option>
+            <mat-option>1 Hour</mat-option>
+            <mat-option>1 Day</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="row mat-elevation-z3">
+    <div class="card">
+      <div class="options-settings">
+        <mat-label>
+          <span style="top: 5px; position: relative;">
+            <mat-icon>bar_chart</mat-icon>
+          </span>
+          <span> RECURRENCE PATTERN</span>
+        </mat-label>
+      </div>
+      <hr>
+      <div class="row divSchedDet">
+        <div class="column recPatternBtn">
+          <mat-radio-group aria-label="recPattern">
+            <mat-radio-button value="1">Daily</mat-radio-button> <br /> <br />
+            <mat-radio-button value="2">Weekly</mat-radio-button> <br /> <br />
+            <mat-radio-button value="3">Monthly</mat-radio-button> <br /> <br />
+            <mat-radio-button value="4">Yearly</mat-radio-button> <br /> <br />
+          </mat-radio-group>
+        </div>
+        <div class="column recPatternDet divSchedDet">
+          <div class="row ">
+            <mat-label> Recur every </mat-label> &nbsp; &nbsp;
+            <input matInput style="border: solid 1px; width:50px"> &nbsp; &nbsp;
+            <mat-label> week(s) on: </mat-label>
+          </div>
+          <br />
+          <div claa="row">
+            <mat-checkbox class="example-margin">
+              Monday</mat-checkbox> &nbsp; &nbsp; &nbsp; &nbsp;
+            <mat-checkbox class="example-margin">
+              Tuesday</mat-checkbox> &nbsp; &nbsp; &nbsp; &nbsp;
+            <mat-checkbox class="example-margin">
+              Wednesday</mat-checkbox> &nbsp; &nbsp; &nbsp; &nbsp;
+            <mat-checkbox class="example-margin">
+              Thursday</mat-checkbox>
+          </div>
+          <br />
+          <div claa="row">
+            <mat-checkbox class="example-margin">
+              Friday</mat-checkbox> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+            <mat-checkbox class="example-margin">
+              Saturday</mat-checkbox> &nbsp; &nbsp; &nbsp; &nbsp;
+            <mat-checkbox class="example-margin">
+              Sunday</mat-checkbox>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mat-elevation-z3">
+    <div class="card">
+      <div class="options-settings">
+        <mat-label>
+          <span style="top: 5px; position: relative;">
+            <mat-icon>bar_chart</mat-icon>
+          </span>
+          <span> RANGE OF RECURRENCE </span>
+        </mat-label>
+      </div>
+      <hr>
+      <div class="row divSchedDet">
+        <div class="row">
+          <div class="column divRangeLeft">
+            <mat-label> Start </mat-label>
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker1">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="column divRangeRight divSchedDet">
+            <div class="row ">
+              <mat-radio-group aria-label="recPattern">
+                <mat-radio-button value="1">No End Date</mat-radio-button> <br /> <br />
+                <mat-radio-button value="2">End After:</mat-radio-button>
+                &nbsp; &nbsp;
+                <input matInput style="border: solid 1px; width:50px"> &nbsp; &nbsp;
+                <mat-label> occurrences </mat-label> <br />
+                <mat-radio-button value="4">End By:</mat-radio-button> &nbsp;&nbsp;
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker2" placeholder="Date">
+                  <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                  <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field> <br /> <br />
+              </mat-radio-group>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <div class="row divBtn">
+    <div>
+      <button mat-raised-button color="primary" class="addBtn">OK</button>&nbsp;&nbsp;
+      <button mat-raised-button color="primary" class="addBtn">Cancel</button>&nbsp;&nbsp;
+      <button mat-raised-button color="primary" class="addBtn">Remove Recurrence</button>&nbsp;&nbsp;
+    </div>
+  </div>
+</div>

@@ -13,6 +13,9 @@ import { CertificateModalComponent } from './modals/certificate-modal/certificat
 import { ClearanceModalComponent } from './modals/clearance-modal/clearance-modal.component';
 import { PermitModalComponent } from './modals/permit-modal/permit-modal.component';
 import { AddAcctngModalComponent } from './modals/add-acctng-modal/add-acctng-modal.component';
+import { RealPropertyTaxCollectionModalComponent } from './modals/real-property-tax-collection-modal/real-property-tax-collection-modal.component';
+import { JobsModalComponent } from './modals/jobs-modal/jobs-modal.component';
+import { GeneralCollectionModalComponent } from './modals/general-collection-modal/general-collection-modal.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { AddAcctngModalComponent } from './modals/add-acctng-modal/add-acctng-mo
     CertificateModalComponent,
     ClearanceModalComponent,
     PermitModalComponent,
-    AddAcctngModalComponent
+    AddAcctngModalComponent,
+    RealPropertyTaxCollectionModalComponent,
+    JobsModalComponent,
+    GeneralCollectionModalComponent,
   ],
   imports: [
     MatDialogModule,
@@ -45,7 +51,10 @@ import { AddAcctngModalComponent } from './modals/add-acctng-modal/add-acctng-mo
     CertificateModalComponent,
     ClearanceModalComponent,
     PermitModalComponent,
-    AddAcctngModalComponent
+    AddAcctngModalComponent,
+    RealPropertyTaxCollectionModalComponent,
+    JobsModalComponent,
+    GeneralCollectionModalComponent
   ]
 })
 export class CommonComponentModule { }

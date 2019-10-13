@@ -4,8 +4,8 @@
   <a mat-list-item [matMenuTriggerFor]="documents"><mat-icon>description</mat-icon><span> Documents </span></a>
   <a mat-list-item routerLink="id"><mat-icon>perm_identity</mat-icon><span> ID System </span></a> 
   <a mat-list-item routerLink="acctng"><mat-icon> money</mat-icon><span> Basic Accounting </span></a> 
-  <a mat-list-item routerLink="real-property-tax"><span> Real Property Tax Administration System </span></a> 
-  <a mat-list-item routerLink="queueing-and-sms"><span> Queueing and SMS Notification </span></a> 
+  <a mat-list-item [matMenuTriggerFor]="collection"><mat-icon> money</mat-icon><span> Collection Administration </span></a>
+  <a mat-list-item routerLink="queueing-and-sms"><mat-icon>description</mat-icon><span> Queueing and SMS Notification </span></a> 
   <a mat-list-item [matMenuTriggerFor]="registry"><mat-icon>file_copy</mat-icon><span> Civil Registry System </span></a> 
   
   <mat-menu #documents="matMenu">
@@ -19,5 +19,10 @@
     <a mat-menu-item routerLink="marriage">Marriage</a>
     <a mat-menu-item routerLink="death">Death</a>
     <a mat-menu-item routerLink="others">Others</a>
+  </mat-menu>
+
+  <mat-menu #collection="matMenu">
+      <a mat-menu-item routerLink="general-collection">General</a>
+      <a mat-menu-item routerLink="real-property-tax">Real Propert Tax</a>
   </mat-menu>
 </mat-nav-list>

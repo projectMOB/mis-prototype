@@ -1,0 +1,105 @@
+.example-card{
+    max-width: 100%;
+    
+}
+.card {
+    padding: 5px;
+    margin-top:15px;
+   -webkit-transition: .25s box-shadow;
+   transition: .25s box-shadow;
+   background:transparent;
+   border-radius: 4px;
+
+   .row {
+        display: flex;
+    }
+    height: 100%;
+}
+.printBtn{
+    margin-left: 10px;
+}
+.divStatus{
+    text-align: center;
+}
+.row{
+    position: float;
+}
+.options-settings{
+    margin-bottom: 20px;
+} 
+.colReceipt{
+    text-align: center;
+}
+.colInfo{
+    flex: 80%;
+    padding: 10px;
+    height: 100%; /* Should be removed. Only for demonstration */
+    border: 2px solid wheat;
+}
+.colPayment{
+    flex: 20%;
+    padding: 10px;
+    height: 100%; /* Should be removed. Only for demonstration */
+    border: 2px solid wheat;
+}
+.colDetails{
+    flex: 70%;
+}
+.colReceipt{
+    flex: 30%;
+    text-align: center;
+}
+.status{
+    font-size: 26px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+
+}
+.receiptNo{
+    text-align: center;
+    padding: 1px;
+}
+.stubNo{
+    font-size: 16px;
+}
+.divReceiptNo{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+.search-icon {
+    position: absolute;
+    left: 95%;
+    top: 21%;
+}
+.search-bar {
+    width: 350px;
+}
+table{
+    width: 100%;
+}
+.divBtn{
+    flex: 60%;
+}
+.divAmnt{
+    flex: 40%;
+}
+.divBtnAmt{
+    padding: 2px;
+}
+.divRemarks{
+    flex: 50%;
+}
+.divOthers{
+    flex: 50%;
+}
+.tabRemarksOthers{
+    width: 100%;
+}
+.txtArea{
+    width: 100%;
+}
+mat-tab-group{
+    background-color: whitesmoke;
+}

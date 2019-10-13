@@ -36,8 +36,9 @@ import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 import { BirthComponent } from './civil-registry/birth/birth.component';
 import { MarriageComponent } from './civil-registry/marriage/marriage.component';
 import { DeathComponent } from './civil-registry/death/death.component';
-import { RealPropertyTaxComponent } from './real-property-tax/real-property-tax.component';
+import { RealPropertyTaxComponent } from './collections/real-property-tax/real-property-tax.component';
 import { QueueingAndSmsComponent } from './queueing-and-sms/queueing-and-sms.component';
+import { GeneralCollectionComponent } from './collections/general-collection/general-collection.component';
 
 FusionChartsModule.fcRoot(FusionCharts, Charts, FusionTheme);
 
@@ -66,7 +67,8 @@ const routes: Routes = [
     MarriageComponent,
     DeathComponent,
     RealPropertyTaxComponent,
-    QueueingAndSmsComponent],
+    QueueingAndSmsComponent,
+    GeneralCollectionComponent],
   imports: [
     MatIconModule,
     MatInputModule,

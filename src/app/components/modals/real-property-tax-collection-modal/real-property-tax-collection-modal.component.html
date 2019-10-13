@@ -1,0 +1,267 @@
+<div class="row">
+  <!-- Breadcrumbs --->
+  <div>
+    <mat-icon>home</mat-icon>
+    <mat-label class="breadcrumbs-acctng"> Real Property Tax Collection </mat-label>
+  </div>
+  <br />
+  <div class="row mat-elevation-z3">
+    <div class="card">
+      <div class="options-settings">
+        <mat-label>
+          <span style="top: 5px; position: relative;">
+            <mat-icon>bar_chart</mat-icon>
+          </span>
+          <span> PAYER INFO</span>
+        </mat-label>
+      </div>
+      <hr>
+      <br />
+      <div class="row">
+        <div class="colInfo">
+          <div class="row">
+            <div class="colDetails">
+              <div class="row">
+                <mat-form-field appearance="legacy">
+                  <mat-label>Payer</mat-label>
+                  <input matInput >
+                </mat-form-field>
+                &nbsp; &nbsp;
+                <mat-form-field appearance="legacy">
+                  <mat-label>Form No</mat-label>
+                  <input matInput>
+                </mat-form-field>
+                &nbsp; &nbsp;
+                <mat-form-field appearance="legacy">
+                  <mat-label>Receipt Date</mat-label>
+                  <input matInput>
+                </mat-form-field>
+              </div>
+              <div class="row">
+                <mat-form-field appearance="legacy">
+                  <mat-label>Paid By</mat-label>
+                  <input matInput>
+                </mat-form-field>
+                &nbsp; &nbsp;
+                <mat-form-field appearance="legacy">
+                  <mat-label>Address</mat-label>
+                  <input matInput>
+                </mat-form-field>
+                &nbsp; &nbsp;
+                <mat-form-field appearance="legacy">
+                  <mat-label>Collector</mat-label>
+                  <input matInput>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="colReceipt">
+              <br />
+              <div class="row divReceiptNo">
+                <mat-label class="receiptNo">REC10131901</mat-label>
+              </div>
+              <div class="row divStatus">
+                <mat-label class="status">ONLINE</mat-label>
+              </div><br />
+              <div class="row ">
+                <mat-label class="stubNo">Stub No. 2</mat-label>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <mat-form-field appearance="outline" class="search-bar">
+              <mat-label>Ledger</mat-label>
+              <mat-icon class="search-icon">search</mat-icon>
+              <input matInput>
+            </mat-form-field> &nbsp;
+            <mat-form-field appearance="outline" class="search-bar">
+              <mat-label>Barcode</mat-label>
+              <mat-icon class="search-icon">search</mat-icon>
+              <input matInput>
+            </mat-form-field>&nbsp;
+          </div>
+          <hr />
+          <div class="row ">
+            <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z3">
+              <!-- Position Column -->
+              <ng-container matColumnDef="isPay">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> PAY? </th>
+                <td mat-cell *matCellDef="let element">
+                  <mat-checkbox class="example-margin" [checked]="element.isPay">
+                  </mat-checkbox>
+                </td>
+              </ng-container>
+
+              <!-- Position Column -->
+              <ng-container matColumnDef="tdNo">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> TD NO </th>
+                <td mat-cell *matCellDef="let element"> {{element.tdNo}} </td>
+              </ng-container>
+
+              <!-- Name Column -->
+              <ng-container matColumnDef="declaredOwner">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> DECLARED OWNER </th>
+                <td mat-cell *matCellDef="let element"> {{element.declaredOwner}} </td>
+              </ng-container>
+
+              <!-- Weight Column -->
+              <ng-container matColumnDef="fromYear">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> FROM YEAR </th>
+                <td mat-cell *matCellDef="let element"> {{element.fromYear}} </td>
+              </ng-container>
+
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="fromQtr">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> FROM QTR </th>
+                <td mat-cell *matCellDef="let element"> {{element.fromQtr}} </td>
+              </ng-container>
+
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="toYear">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="colored-header"> TO YEAR </th>
+                <td mat-cell *matCellDef="let element"> {{element.toYear}} </td>
+              </ng-container>
+
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="toQtr">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="colored-header"> TO QTR </th>
+                <td mat-cell *matCellDef="let element"> {{element.toQtr}} </td>
+              </ng-container>
+
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="amountDue">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header class="colored-header"> AMOUNT DUE </th>
+                <td mat-cell *matCellDef="let element"> {{element.amountDue}} </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+          </div>
+          <br />
+          <hr />
+          <div class="row divBtnAmt">
+            <div class="divBtn">
+              <button mat-raised-button color="primary" class="addBtn">Select All</button>&nbsp;&nbsp;
+              <button mat-raised-button color="primary" class="addBtn">Deselect All</button>&nbsp;&nbsp;
+              <button mat-raised-button color="primary" class="addBtn">Full Payment</button>&nbsp;&nbsp;
+              <button mat-raised-button color="primary" class="addBtn">Partial Payment</button>&nbsp;&nbsp;
+            </div>
+            <div class="divAmnt">
+              <mat-form-field appearance="legacy">
+                <mat-label>General</mat-label>
+                <input matInput>
+              </mat-form-field> &nbsp;
+              <mat-form-field appearance="legacy">
+                <mat-label>SEF</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </div>
+          </div>
+          <hr />
+          <div class="row ">
+            <mat-tab-group class="tabRemarksOthers">
+              <mat-tab class="remarks" label="Remarks">
+                <div>
+                  <mat-form-field style="width: 100%;">
+                    <textarea matInput rows="5" cols="1000" placeholder="Remarks"></textarea>
+                  </mat-form-field>
+                </div>
+              </mat-tab>
+              <mat-tab label="Checks and other Non-Cash Payment Details">
+                <div>
+                  <table mat-table [dataSource]="dataSourceOthers" matSort class="mat-elevation-z3">
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="type">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header> TYPE </th>
+                      <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="particulars">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header> PARTICULARS </th>
+                      <td mat-cell *matCellDef="let element"> {{element.particulars}} </td>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="amount">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header> AMOUNT</th>
+                      <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumnsOthers"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumnsOthers;"></tr>
+                  </table>
+                </div>
+              </mat-tab>
+            </mat-tab-group>
+          </div>
+        </div>
+        <div class="colPayment">
+            <br/>
+          <div class="row">
+            <mat-form-field appearance="legacy">
+              <mat-label>Amount Due</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <br/>
+          <div class="row">
+            <mat-form-field appearance="legacy">
+              <mat-label>Total Cash Payment</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <br/>
+          <div class="row">
+            <mat-form-field appearance="legacy">
+              <mat-label>Total Non-Cash payment</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <br/>
+          <div class="row">
+            <mat-form-field appearance="legacy">
+              <mat-label>Credits</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <br/>
+          <div class="row">
+            <mat-form-field appearance="legacy">
+              <mat-label>Cash Change</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <br/>
+          <div class="row">
+            <mat-form-field appearance="legacy">
+              <mat-label>Balance Unpaid</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <hr/>
+          <div class="row">
+            <mat-label>Payment Methods</mat-label>
+          </div>
+          <br/>
+          <div class="row">
+            <button mat-raised-button color="primary" class="addBtn">F9 - Cash</button>
+          </div>
+          <br/>
+          <div class="row">
+            <button mat-raised-button color="primary" class="addBtn">F10 - Check</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
