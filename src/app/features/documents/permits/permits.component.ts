@@ -49,19 +49,22 @@ export class PermitsComponent implements OnInit {
 
   addModal() {
     this.dialog.open(PermitModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 
   view() {
     this.dialog.open(PermitModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 
   edit() {
     this.dialog.open(PermitModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 

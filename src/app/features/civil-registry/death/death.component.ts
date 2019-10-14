@@ -46,7 +46,8 @@ export class DeathComponent implements OnInit {
 
   addModal() {
     this.dialog.open(DeathRegistryModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 
@@ -58,7 +59,8 @@ export class DeathComponent implements OnInit {
 
   edit() {
     this.dialog.open(DeathRegistryModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 

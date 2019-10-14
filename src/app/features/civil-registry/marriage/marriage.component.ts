@@ -46,7 +46,8 @@ export class MarriageComponent implements OnInit {
 
   addModal() {
     this.dialog.open(MarriageRegistryModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 
@@ -58,7 +59,8 @@ export class MarriageComponent implements OnInit {
 
   edit() {
     this.dialog.open(MarriageRegistryModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 

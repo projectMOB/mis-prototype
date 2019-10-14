@@ -44,19 +44,22 @@ export class RealPropertyTaxComponent  implements OnInit {
 
   addModal() {
     this.dialog.open(RealPropertyTaxCollectionModalComponent, {
-      width: '1300px'
+      width: '1300px',
+      height: '650px'
     });
   }
 
   view() {
     this.dialog.open(RealPropertyTaxCollectionModalComponent, {
-      width: '1300px'
+      width: '1300px',
+      height: '650px'
     });
   }
 
   edit() {
     this.dialog.open(RealPropertyTaxCollectionModalComponent, {
-      width: '1300px'
+      width: '1300px',
+      height: '650px'
     });
   }
 

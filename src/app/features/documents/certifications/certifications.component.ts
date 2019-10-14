@@ -49,19 +49,22 @@ export class CertificationsComponent implements OnInit {
 
   addModal() {
     this.dialog.open(CertificateModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 
   view() {
     this.dialog.open(CertificateModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 
   edit() {
     this.dialog.open(CertificateModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 

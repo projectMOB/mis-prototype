@@ -142,19 +142,22 @@ export class QueueingAndSmsComponent implements OnInit {
 
   addModal() {
     this.dialog.open(JobsModalComponent, {
-      width: '800px'
+      width: '800px',
+      height: '600px'
     });
   }
 
   view() {
     this.dialog.open(JobsModalComponent, {
-      width: '800px'
+      width: '800px',
+      height: '600px'
     });
   }
 
   edit() {
     this.dialog.open(JobsModalComponent, {
-      width: '800px'
+      width: '800px',
+      height: '600px'
     });
   }
 

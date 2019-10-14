@@ -44,19 +44,22 @@ export class GeneralCollectionComponent implements OnInit {
 
   addModal() {
     this.dialog.open(GeneralCollectionModalComponent, {
-      width: '1300px'
+      width: '1300px',
+      height: '650px'
     });
   }
 
   view() {
     this.dialog.open(GeneralCollectionModalComponent, {
-      width: '1300px'
+      width: '1300px',
+      height: '650px'
     });
   }
 
   edit() {
     this.dialog.open(GeneralCollectionModalComponent, {
-      width: '1300px'
+      width: '1300px',
+      height: '650px'
     });
   }
 

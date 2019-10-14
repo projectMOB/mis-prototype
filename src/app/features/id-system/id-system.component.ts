@@ -49,19 +49,22 @@ export class IdSystemComponent implements OnInit {
 
   addModal(){
     this.dialog.open(IdSystemModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 
   view(){
     this.dialog.open(IdSystemModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 
   edit(){
     this.dialog.open(IdSystemModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 

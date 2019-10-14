@@ -55,19 +55,22 @@ export class ClearancesComponent implements OnInit {
 
   view() {
     this.dialog.open(ClearanceModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 
   edit() {
     this.dialog.open(ClearanceModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 
   delete() {
     this.dialog.open(DeleteModalComponent, {
-      width: '600px'
+      width: '600px',
+      height: '600px'
     });
   }
 

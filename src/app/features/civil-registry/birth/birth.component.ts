@@ -52,9 +52,18 @@ export class BirthComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
+
   addModal() {
     this.dialog.open(BirthRegistryModalComponent, {
-      width: '800px'
+      width: '800px',
+      height: '600px'
     });
   }
 
@@ -66,7 +75,8 @@ export class BirthComponent implements OnInit {
 
   edit() {
     this.dialog.open(BirthRegistryModalComponent, {
-      width: '800px'
+      width: '800px',
+      height: '600px'
     });
   }
 
