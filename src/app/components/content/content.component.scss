@@ -8,8 +8,13 @@ mat-sidenav-container{
     // max-height: 100%;
 }
 
+// mat-drawer-container{
+//     height: 100%;
+// }
+
 mat-sidenav-content{
     padding: 2%;
+    overflow-x: hidden;
     img {
         width: 300px;
         margin-left: 32%;
